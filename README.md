@@ -1,3 +1,1 @@
 # collab-test
-
-.DS-store
