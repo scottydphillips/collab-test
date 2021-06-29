@@ -1,0 +1,77 @@
+:root {
+	--primary: #1a48cc;
+	--secondary: #102b7a;
+	--tertiary: #aeb6eb;
+	--complement: #cc9ea1;
+	--triadic-red: #cc1a48;
+	--triadic-green: #48cc1a;
+}
+
+* {
+	font-family: 'Expletus Sans', sans-serif;
+	font-size: 62.5%
+}
+
+header {
+	background: linear-gradient(to right, var(--secondary), var(--primary), var(--tertiary));
+	color: var(--complement);
+}
+
+.jumbotron-fluid {
+	min-height: 8.5vh;
+}
+
+header img {
+	display: inline;
+	float: left;
+}
+
+header h1 {
+	font-size: 3rem;
+	text-align: center;
+	font-family: 'Goldman', monospace;
+}
+
+header h2 {
+	color: var(--tertiary);
+	font-size: 2.6rem;
+	text-align: left;
+	margin-left: 20vw;
+}
+
+.search-container {
+	margin: 5%;
+}
+
+#search-label {
+	font-size: 1.8rem;
+}
+
+#recent-searches-label {
+	font-size: 1.8rem;
+}
+
+#recent-searches {
+	background: linear-gradient(to right, var(--secondary), var(--primary), var(--tertiary) );
+	color: var(--complement);
+	font-size: 1.8rem;
+}
+
+#youtube-container {
+	font-size: 1.6rem;
+	justify-content: center;
+}
+
+#song-info {
+	font-size: 1.6rem;
+	text-align: center;
+}
+
+#lyrics {
+	font-size: 1.2rem;
+	text-align: center;
+}
+
+#similar-songs {
+	justify-content: right;
+}
