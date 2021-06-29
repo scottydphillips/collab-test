@@ -31,7 +31,8 @@ function createButtons() {
         );
       }
     }
-    $("#add-city").on("click", handleSubmit);
+
+    $("#add-SONG").on("click", handleSubmit);
   $(".list-group").on("click", ".list-group-item", function () {
-    getWeather($(this).text());
+    PLACEHOLDERFUNCTION($(this).text());
   
