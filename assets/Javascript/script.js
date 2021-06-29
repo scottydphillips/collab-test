@@ -18,4 +18,6 @@ if (history.length > 0) {
             }
         }
 
-        
+
+// will need to call this function INSIDE of the .then which also has the other functions in it...        
+createButtons();
