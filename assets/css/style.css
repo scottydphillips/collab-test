@@ -45,12 +45,16 @@ header h2 {
 	margin: 5%;
 }
 
-#search {
-	min-height: 2.5rem;
+.search {
+	min-height: 3.5rem;
 }
 
-#search-label {
+.search-label {
 	font-size: 1.8rem;
+}
+
+#artist-search-label {
+	font-size: 1.7rem
 }
 
 #recent-searches-label {
