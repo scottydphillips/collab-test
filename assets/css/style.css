@@ -45,12 +45,40 @@ header h2 {
 	margin: 5%;
 }
 
-#search {
-	min-height: 2.5rem;
+.search-label {
+	font-size: 1.8rem;
 }
 
-#search-label {
-	font-size: 1.8rem;
+#artist-search {
+	width: 18rem;
+	height: 2.5rem;
+	font-size: 1.4rem;
+}
+
+#artist-search-label {
+	font-size: 1.7rem
+}
+
+#song-search {
+	width: 18rem;
+	height: 2.5rem;
+	font-size: 1.4rem;
+}
+
+.btn-outline-dark {
+	color: var(--secondary);
+	border: 0.1rem solid var(--secondary);
+	border-radius: 2rem;
+	padding: 0.2rem;
+}
+
+.btn-outline-dark:hover {
+	background: var(--secondary);
+	color: var(--tertiary);
+}
+
+.btn-outline-dark:focus {
+	box-shadow: 0.35rem 0rem 0.35m var(--primary);
 }
 
 #recent-searches-label {
@@ -84,7 +112,7 @@ header h2 {
 	border: .25rem solid var(--primary);
 }
 
-#lyrics {
+#lyricstext {
 	font-size: 1.2rem;
 	text-align: center;
 	font-family: 'Iceland', cursive;
@@ -95,12 +123,18 @@ header h2 {
 	background: linear-gradient(to right, var(--secondary), var(--primary), var(--secondary) );
 	color: var(--tertiary);
 	font-size: 1.8rem;
-	border-radius: 2rem;;
+	border-radius: 2rem;
+	padding: 1.5rem;
+	margin-top: 10%;
 }
 
 #lyrics button:hover {
 	cursor: pointer;
 	box-shadow: 0.35rem 0rem 0.35rem var(--tertiary);
+}
+
+#lyrics button:focus {
+	box-shadow: 0.35rem 0rem 0.35rem var(--tertiary) 0.35rem 0rem 0.35rem var(--tertiary);
 }
 
 #another-blank {
