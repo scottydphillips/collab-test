@@ -23,35 +23,47 @@
     <div class="container-fluid">
         <div class="container">
             <div class="row">
-                <div class="col-3 search-container">
-                    <label for="search" id="search-label">Search for a song:</label> <br>
-                    <input type="text" id="search" name="song-search" placeholder="Your Song">
-                    <hr>
-                    <div class="row card">
-                        <h4 id="recent-searches-label">Recent Searches:</h4>
-                        <ul class="list-group list-group-flush"  id="recent-searches">
+                <div class="row col-12">
+                    <div class="col-3 search-container">
+                        <label for="search" class="search search-label" id="artist-search-label">Search for an artist:</label> <br>
+                        <input type="text" id="artist-search" name="artist-search" placeholder="Elton John">
+                        <hr>
+                        <label for="search" class="search search-label" id="song-search-label">Search for a song:</label> <br>
+                        <input type="text" id="song-search" name="song-search" placeholder="Your Song"> 
+                        <hr>
+                        <div class="row card">
+                            <h4 id="recent-searches-label">Recent Searches:</h4>
+                            <ul class="list-group list-group-flush"  id="recent-searches">
 
-                        </ul>
+                            </ul>
+                        </div>
+
                     </div>
-                </div>
-                <div class="col-4" id="youtube-container">
-                    YouTube Video of Your Song 
-                </div>
-                <div class=col-1 id="blank-container">
-                </div>
-                <div class="col-4" id=song-info>
-                    Song Info
-                </div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-3" id="another-blank">
-                        </div>
-                        <div class="col-6" id="lyrics">
-                            Lyrics:
-                            <p id="lyricsText"></p>
-                        </div>
-                        <div class="col-3" id="similar-songs">
-                            Similar Songs
+                    <div class="col-4" id="youtube-container">
+                        YouTube Video of Your Song 
+                    </div>
+                    <div class=col-1 id="blank-container">
+                    </div>
+                    <div class="col" id=song-info>
+                         Song Info
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-4" id="another-blank">
+                            </div>
+                            <div class="col-5" id="lyrics">
+                                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                    See song lyrics:
+                                  </button>
+                                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                                    <p id="lyricsText"></p>
+                                </div>
+                            </div>
+                            <div class="col-1"></div>
+                            <div class="col" id="similar-songs">
+                                Similar Songs
+                            </div>
+
                         </div>
                     </div>
                 </div>
