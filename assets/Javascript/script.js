@@ -21,3 +21,17 @@ if (history.length > 0) {
 
 // will need to call this function INSIDE of the .then which also has the other functions in it...        
 createButtons();
+
+// this is a rough thing of how the buttons would go into the list
+function createButtons() {
+    $(".list-group").empty()
+    for (var i = 0; i < history.length; i++) {
+        $(".list-group").prepend(
+          " <li class='list-group-item'>" + history[i] + "</li>"
+        );
+      }
+    }
+    $("#add-city").on("click", handleSubmit);
+  $(".list-group").on("click", ".list-group-item", function () {
+    getWeather($(this).text());
+  
