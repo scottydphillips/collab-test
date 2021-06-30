@@ -6,10 +6,10 @@ $(function() {
             type: "video",
             maxResults: 3,
             order: "viewCount"
-            q: $("#search")
+            q: encodeURIComponent($("#search"))
         });
         request.execute(function(response) {
-            var.results = response.result;
+            var results = response.result;
             $.each(results, function(index, item) {
                 $.get("tpl/item.html", function(index,item) {
                     $("#results").append(data);
@@ -20,7 +20,7 @@ $(function() {
 });
 
 function init() {
-    gapi.client.setApiKey(AIzaSyCTdVNpL7Bqg2E6ERIPsO5dTg3GPIOtwmM)
+    gapi.client.setApiKey("AIzaSyCTdVNpL7Bqg2E6ERIPsO5dTg3GPIOtwmM")
     gapi.cleint.load("youtube", "v3", function(){
      })
 }

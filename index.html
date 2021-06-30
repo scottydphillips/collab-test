@@ -27,11 +27,9 @@
                     <div class="col-3 search-container">
                         <label for="search" class="search search-label" id="artist-search-label">Search for an artist:</label> <br>
                         <input type="text" id="artist-search" name="artist-search" placeholder="Elton John">
-                        <button type="submit" class="btn btn-outline-dark">Submit</button>
                         <hr>
                         <label for="search" class="search search-label" id="song-search-label">Search for a song:</label> <br>
                         <input type="text" id="song-search" name="song-search" placeholder="Your Song"> 
-                        <button type="submit" class="btn btn-outline-dark">Submit</button>
                         <hr>
                         <div class="row card">
                             <h4 id="recent-searches-label">Recent Searches:</h4>
@@ -39,28 +37,6 @@
 
                             </ul>
                         </div>
-                        
-                        <!-- this is for youtube search -->
-                        <form id="yt-form">
-                            <p><input type="text" id="keyword-input" placeholder="Enter keyword" required></p>
-                            <p><input type="number" id="maxresult-input" placeholder="Max Results" min="1" max="50" required></p>
-                            <p>
-                                <select id="order-input" required>
-                                    <option value="">--SELECT ORDER--</option>
-                                    <option value="date">Date</option>
-                                    <option value="rating">Rating</option>
-                                    <option value="relevance">Relevance</option>
-                                    <option value="title">Title</option>
-                                    <option value="viewCount" selected>View Count</option>
-                                </select>
-                            </p>
-                            <p>
-                                <input type="submit" value="Submit">
-                            </p>
-                        </form>
-                        <!-- end -->
-
-
                     </div>
                     <div class="col-4" id="youtube-container">
                         YouTube Video of Your Song 
@@ -99,10 +75,7 @@
 <script src="./script.js"></script>
 <script src="https://apis.google.com/js/client.js"></script>
 
-<<<<<<< HEAD
 <script src="jquery-3.5.1.min.js"></script>
 
-=======
 <script src="./assets/Javascript/Musixmatch.js"></script>
->>>>>>> 9c320e35ef77782968f4f53e0006bb7ba5e2e56d
 </html>
