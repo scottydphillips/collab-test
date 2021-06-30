@@ -1,7 +1,7 @@
 
 // gets local storage if there is any for the searches and saves them to the variable 'searchHistory'
 var searchHistory = JSON.parse(localStorage.getItem("history")) || [];
-
+var artistSearched = JSON.parse(localStorage.getItem("ArtistHistory")) || [];
 
 if (history.length > 0) {
     PLACEHOLDERFUNCTION(history[history.length -1]);
