@@ -128,7 +128,7 @@ header h2 {
 	font-size: 1.6rem;
 }
 
-#see-lyrics-button {
+#lyrics-modal {
 	background: linear-gradient(to right, var(--secondary), var(--primary), var(--secondary) );
 	color: var(--tertiary);
 	font-size: 2rem;
