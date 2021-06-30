@@ -33,7 +33,7 @@
                         <label for="search" class="search search-label" id="artist-search-label">Artist:</label> <br>
                         <input type="text" id="artist-search" name="artist-search" placeholder="Elton John">
                         <br>
-                        <button type="submit" class="btn btn-outline-dark">Search</button>
+                        <button type="submit" class="btn btn-outline-dark" id="search">Search</button>
                         <hr>
                         <div class="row card">
                             <h4 id="recent-searches-label">Recent Searches:</h4>
@@ -62,18 +62,18 @@
                                 <!-- Modal -->
                                 <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                                     <div class="modal-dialog">
-                                         <div class="modal-content">
-                                             <div class="modal-header">
-                                                 <h5 class="modal-title" id="staticBackdropLabel">Song Lyrics</h5>
-                                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="staticBackdropLabel">Song Lyrics</h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                             </div>
                                             <div class="modal-body">
-                                                <p id="lyricsText">Aggregation of pertinent information</p>
+                                                <p id="lyrics-text"></p>
                                             </div>
                                             <div class="modal-footer">
                                                 <button type="button" class="btn" data-bs-dismiss="modal" id="close-button">Close</button>
                                             </div>
-                                         </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
