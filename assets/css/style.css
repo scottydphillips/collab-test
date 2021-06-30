@@ -70,9 +70,6 @@ header h2 {
 }
 
 .btn-outline-dark {
-	display: flex;
-	justify-content: center;
-	align-items: center;
 	color: var(--secondary);
 	border: 0.1rem solid var(--secondary);
 	border-radius: 2rem;
@@ -164,6 +161,33 @@ header h2 {
 	margin-top: 5%;
 }
 
-@media screen and () {
-	
+@media screen and (max-width=576px) {
+	.search-container {
+		height: auto;
+		width: 100%;
+	}
+	#youtube-container {
+		height: auto;
+		width: 100%;
+	}
+	#blank-container{
+		height: 1%;
+		width: 100%;
+	}
+	#song-info {
+		height: auto;
+		width: 100%;
+	}
+	#another-blank {
+		height: 1%;
+		width: 100%;
+	}
+	#lyrics {
+		height: auto;
+		width: 100%;
+	}
+	#similar-songs {
+		height: auto:
+		width: 100%;
+	}
 }
