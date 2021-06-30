@@ -32,13 +32,15 @@ function createButtons() {
         );
       }
     }
+
+    //this would be near the other search buttons functionality
     function handleSubmit(event) {
         event.preventDefault();
         var songNAME = $("#PLACEHOLDER SONG NAME").val().trim();
     
         getSONGPLACEHOLDER(songNAME);
       }
-
+// need to update IDS add artists too?
     $("#add-SONG").on("click", handleSubmit);
   $(".list-group").on("click", ".list-group-item", function () {
     PLACEHOLDERFUNCTION($(this).text());

@@ -117,7 +117,7 @@ header h2 {
 	border: .25rem solid var(--primary);
 }
 
-#lyricstext {
+#lyrics-text {
 	font-size: 1.2rem;
 	text-align: center;
 	font-family: 'Iceland', cursive;
