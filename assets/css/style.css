@@ -121,7 +121,7 @@ header h2 {
 	font-size: 1.2rem;
 	text-align: center;
 	font-family: 'Iceland', cursive;
-	margin-top: 5%;
+	margin-top: 1%;
 }
 
 #lyrics h5 {
@@ -163,4 +163,24 @@ header h2 {
 	text-align: center;
 	border: .25rem solid var(--primary);
 	margin-top: 5%;
+}
+
+footer {
+	background: linear-gradient(to left, var(--secondary), var(--primary), var(--tertiary));
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+}
+
+footer .container {
+	min-height: 9vh;
+}
+
+footer p {
+	color: var(--tertiary);
+	float: right;
+}
+
+footer img {
+	float: right;
 }

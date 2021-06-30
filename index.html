@@ -33,7 +33,7 @@
                         <label for="search" class="search search-label" id="artist-search-label">Artist:</label> <br>
                         <input type="text" id="artist-search" name="artist-search" placeholder="Elton John">
                         <br>
-                        <button type="submit" class="btn btn-outline-dark">Search</button>
+                        <button type="submit" class="btn btn-outline-dark" id="search">Search</button>
                         <hr>
                         <div class="row card">
                             <h4 id="recent-searches-label">Recent Searches:</h4>
@@ -41,7 +41,6 @@
 
                             </ul>
                         </div>
-
                     </div>
                     <div class="col-md-4" id="youtube-container">
                         YouTube Video of Your Song 
@@ -58,23 +57,23 @@
                             <div class="col-md-5" id="lyrics">
                                 <!-- Button trigger modal -->
                                 <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop" id="lyrics-modal">
-                                    See songs lyrics
+                                    See song lyrics
                                 </button>
                                 <!-- Modal -->
                                 <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                                     <div class="modal-dialog">
-                                         <div class="modal-content">
-                                             <div class="modal-header">
-                                                 <h5 class="modal-title" id="staticBackdropLabel">Song Lyrics</h5>
-                                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="staticBackdropLabel">Song Lyrics</h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                             </div>
                                             <div class="modal-body">
-                                                <p id="lyricsText">Text test</p>
+                                                <p id="lyrics-text">It's an Illusion!</p>
                                             </div>
                                             <div class="modal-footer">
                                                 <button type="button" class="btn" data-bs-dismiss="modal" id="close-button">Close</button>
                                             </div>
-                                         </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -82,13 +81,18 @@
                             <div class="col-md" id="similar-songs">
                                 Similar Songs
                             </div>
-
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <footer>
+        <div class="container">
+            <img src="#" alt="sa1l logo">
+            <p>&copy SA1L 2021</p>
+        </div>
+    </footer>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <script src="jquery-3.5.1.min.js"></script>
