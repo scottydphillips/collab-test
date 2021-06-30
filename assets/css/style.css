@@ -45,6 +45,10 @@ header h2 {
 	margin: 5%;
 }
 
+.search-container h3 {
+	text-align: center;
+}
+
 .search-label {
 	font-size: 1.8rem;
 }
@@ -66,10 +70,14 @@ header h2 {
 }
 
 .btn-outline-dark {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	color: var(--secondary);
 	border: 0.1rem solid var(--secondary);
 	border-radius: 2rem;
 	padding: 0.2rem;
+	margin-top: 1.5rem;
 }
 
 .btn-outline-dark:hover {
@@ -122,10 +130,12 @@ header h2 {
 #lyrics button {
 	background: linear-gradient(to right, var(--secondary), var(--primary), var(--secondary) );
 	color: var(--tertiary);
-	font-size: 1.8rem;
+	font-size: 2rem;
 	border-radius: 2rem;
 	padding: 1.5rem;
 	margin-top: 10%;
+	margin-left: 2.5%;
+	font-family: 'Iceland', sans-serif;
 }
 
 #lyrics button:hover {
@@ -152,4 +162,8 @@ header h2 {
 	text-align: center;
 	border: .25rem solid var(--primary);
 	margin-top: 5%;
+}
+
+@media screen and () {
+	
 }
