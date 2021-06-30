@@ -9,8 +9,8 @@ var key ='AIzaSyCTdVNpL7Bqg2E6ERIPsO5dTg3GPIOtwmM'
 var url ='https://www.googleapis.com/youtube/v3/search?part=snippet&order=viewCount&maxResults=1&q='
 
 // Targets the id to pull text from
-// var songName = getElementById('keyword-input');
-// var artistName = getElementById('artistName');
+// var songName = getElementById('song-search');
+// var artistName = getElementById('artist-search');
 // ^ These ids need to match the form inputs on the main html
 
 // Stores the text to a variable to use later in our fetchYT url
@@ -45,15 +45,15 @@ function getYT(requestYT){
 
 getYT(fetchYt); 
     function addVideo(){
-        document.getElementById("videoListContainer").innerHTML += '<iframe width="560" height="315" src="https://www.youtube.com/embed/' + 'LX17j8h7K3o' + '" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+        document.getElementById("youtube-container").innerHTML += '<iframe width="560" height="315" src="https://www.youtube.com/embed/' + 'LX17j8h7K3o' + '" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
     }
-// 'videolistcontainer would need to be updated to reflect the id of where we want the video to go on the html page
+// 'youtube-container would need to be updated to reflect the id of where we want the video to go on the html page
 // figure out how to target the video id 
 // store video id to a variable (BEFORE this function)
 
     addVideo();
 
-    // $("#videoListContainer").('<iframe width="560" height="315" src="https://www.youtube.com/embed/' + 'LX17j8h7K3o' + '" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>' )
+    // $("#youtube-container").('<iframe width="560" height="315" src="https://www.youtube.com/embed/' + 'LX17j8h7K3o' + '" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>' )
 
 // <iframe width="560" height="315" src="https://www.youtube.com/embed/-vH2eZAM30s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
