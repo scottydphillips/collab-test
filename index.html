@@ -25,7 +25,7 @@
         <div class="container">
             <div class="row">
                 <div class="row col-12">
-                    <div class="col-3 search-container">
+                    <div class="col-md-3 search-container">
                         <h3>Search for a song and an artist:</h3>
                         <label for="search" class="search search-label" id="song-search-label">Song:</label> <br>
                         <input type="text" id="song-search" name="song-search" placeholder="Your Song">
@@ -43,28 +43,43 @@
                         </div>
 
                     </div>
-                    <div class="col-4" id="youtube-container">
+                    <div class="col-md-4" id="youtube-container">
                         YouTube Video of Your Song 
                     </div>
-                    <div class=col-1 id="blank-container">
+                    <div class=col-md-1 id="blank-container">
                     </div>
-                    <div class="col" id=song-info>
+                    <div class="col-md" id=song-info>
                          Song Info
                     </div>
                     <div class="container">
                         <div class="row">
-                            <div class="col-4" id="another-blank">
+                            <div class="col-md-4" id="another-blank">
                             </div>
-                            <div class="col-5" id="lyrics">
-                                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                    See song lyrics:
-                                  </button>
-                                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-                                    <p id="lyricsText"></p>
+                            <div class="col-md-5" id="lyrics">
+                                <!-- Button trigger modal -->
+                                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop" id="see-lyrics-button">
+                                    See songs lyrics
+                                </button>
+                                <!-- Modal -->
+                                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                         <div class="modal-content">
+                                             <div class="modal-header">
+                                                 <h5 class="modal-title" id="staticBackdropLabel">Song Lyrics</h5>
+                                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <p id="lyricsText"></p>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn" data-bs-dismiss="modal" id="close-button">Close</button>
+                                            </div>
+                                         </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-1"></div>
-                            <div class="col" id="similar-songs">
+                            <div class="col-md-1"></div>
+                            <div class="col-md" id="similar-songs">
                                 Similar Songs
                             </div>
 
