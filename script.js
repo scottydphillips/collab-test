@@ -39,6 +39,7 @@ function getYT(requestYT){
     .then(function(data){
         console.log(data);
 
+
     })
 }
 
@@ -57,4 +58,4 @@ getYT(fetchYt);
 
 // <iframe width="560" height="315" src="https://www.youtube.com/embed/-vH2eZAM30s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-// data.kind.items.id.videoid
+// item.id.videoId+''+item.snippet
