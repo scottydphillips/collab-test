@@ -117,10 +117,10 @@ header h2 {
 	border: .25rem solid var(--primary);
 }
 
-#lyricstext {
+#lyrics-text {
 	font-size: 1.4rem;
 	font-family: 'Iceland', cursive;
-	margin-top: 5%;
+	margin-top: 1%;
 }
 
 #lyrics h5 {
