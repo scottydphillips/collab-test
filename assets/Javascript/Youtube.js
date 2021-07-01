@@ -1,62 +1,34 @@
-var key ='AIzaSyCTdVNpL7Bqg2E6ERIPsO5dTg3GPIOtwmM'
-// var options = {
-//     part: 'snippet',
-//     key: 'key', 
-//     maxResults: 1,
-//     order: 'viewCount',
-// }
-
-var url ='https://www.googleapis.com/youtube/v3/search?part=snippet&order=viewCount&maxResults=1&q='
-
-// Targets the id to pull text from
-// var songName = document.getElementById('song-search');
-// var artistName = document.getElementById('artist-search');
-// ^ These ids need to match the form inputs on the main html
-
-// Stores the text to a variable to use later in our fetchYT url
-// var song = songName.textcontent; 
-// var artist = artistName.textcontent;
-// song = song.replace(/\s+/g, '+');
-// artist = artist.replace(/\s+/g, '+');
-// .replace(/\s+/g, '+')
-// ^ These  need to replace spaces with '+' -- might need to research how to replace chars in string with other chars
-// these are test variables that will be commented or deleted later
-var song = 'nothing+lasts+forever+'
-var artist = 'sam+hunt'
-
-
-
-
-
-var fetchYt = url + song + artist + '&key=' + key;
+// var key ='AIzaSyCTdVNpL7Bqg2E6ERIPsO5dTg3GPIOtwmM'
+// var key ='AIzaSyA4-_coMcDHGBCtZo-lAsTusx2Od87Pq90'
+var key ='AIzaSyDMLxTEPfEaHTNQDsnhf_JMyNYmurge8tE'
+// var apiUrl ='https://www.googleapis.com/youtube/v3/search?part=snippet&order=viewCount&maxResults=1&q='
+var songName = document.getElementById('song-search');
+var artistName = document.getElementById('artist-search');
+var song = songName.textContent; 
+var artist = artistName.textContent;
+console.log(song)
+console.log(artist)
+var fetchYt = 'https://www.googleapis.com/youtube/v3/search?part=snippet&order=viewCount&maxResults=1&q=' + song + artist + '&key=' + key;
+var videoUrl = '';
 
 console.log(fetchYt)
 function getYT(requestYT){
  fetch (fetchYt)
     .then(function(res){
-        return res.json();
-    })
-    .then(function(data){
-        console.log(data);
-        console.log(data.items[0].id.videoId);
-    $('#youtube-container').append(items.id.videoId)
+        console.log(res)
+        console.log(res.body)
+       videoUrl = res.url;
+       console.log (videoUrl);
+       return res.json();
+    }).finally(addVideo)
+} 
+ 
+function addVideo(){
 
-    })
-}
-
-
-getYT(fetchYt); 
-    function addVideo(){
-        document.getElementById("youtube-container").innerHTML += '<iframe width="560" height="315" src="https://www.youtube.com/embed/' + 'LX17j8h7K3o' + '" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+        // document.getElementById("youtube-container").innerHTML = '<iframe width="560" height="315" src="${videoUrl}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture></iframe>';
+        document.getElementById("youtube-container").innerHTML = `<iframe src='${videoUrl}'></iframe>`;
+        console.log(document.getElementById("youtube-container").innerHTML)
     }
-// 'youtube-container would need to be updated to reflect the id of where we want the video to go on the html page
-// figure out how to target the video id 
-// store video id to a variable (BEFORE this function)
+// store video id OR url to a variable (BEFORE this function) 
 
-    addVideo();
-
-    // $("#youtube-container").('<iframe width="560" height="315" src="https://www.youtube.com/embed/' + 'LX17j8h7K3o' + '" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>' )
-
-// <iframe width="560" height="315" src="https://www.youtube.com/embed/-vH2eZAM30s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-// item.id.videoId+'
+searchBtn.addEventListener('click', getYT);
