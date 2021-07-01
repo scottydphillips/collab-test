@@ -14,7 +14,6 @@ function renderSearchHistory() {
         var btn = document.createElement('button');
         
         btn.setAttribute('type', 'button');
-        btn.setAttribute('aria-controls', '');
         btn.classList.add('history-btn', 'btn-history');
 
         btn.setAttribute('data-search', searchHistory[i]);
