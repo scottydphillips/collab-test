@@ -18,29 +18,29 @@ header {
 	color: var(--complement);
 }
 
-.jumbotron-fluid {
+header .container {
 	min-height: 9vh;
 }
 
 header img {
 	display: inline;
 	float: left;
-	max-width: 10%;
-	max-height: 10%;
+	max-width: 8vh;
+	max-height: 8vh;
+	margin-top: 1rem;
 }
 
 header h1 {
-	font-size: 3.6rem;
+	font-size: 6rem;
 	text-align: center;
 	font-family: 'Goldman', monospace;
 	color: var(--complement);
 }
 
-header h2 {
+.lead {
 	color: var(--tertiary);
-	font-size: 3rem;
-	text-align: left;
-	margin-left: 20vw;
+	font-size: 2.2rem;
+	text-align: center;
 }
 
 .search-container {
@@ -179,11 +179,13 @@ footer .container {
 
 footer p {
 	color: var(--tertiary);
-	float: right;
+	text-align: center;
+	margin-top: .75rem;
 }
 
 footer img {
-	float: right;
-	max-width: 10%;
-	max-height: 10%;
+	margin-left: 45%;
+	max-width: 8vh;
+	max-height: 8vh;
+	margin-top: 1rem;
 }
