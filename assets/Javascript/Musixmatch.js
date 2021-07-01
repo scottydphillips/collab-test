@@ -14,7 +14,6 @@ function renderSearchHistory() {
         var btn = document.createElement('button');
         
         btn.setAttribute('type', 'button');
-        btn.setAttribute('aria-controls', '');
         btn.classList.add('history-btn', 'btn-history');
 
         btn.setAttribute('data-search', searchHistory[i]);
@@ -57,6 +56,7 @@ function getLyrics(event) {
         })
         .then(function (data) {
             console.log(data);
+            appendToHistory(search);
 
             if (data.message.body.length === 0) {
                 lyricsText.textContent = "Sorry, can't find the lyrics for this song. Try searching for another one!"
