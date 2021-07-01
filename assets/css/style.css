@@ -45,10 +45,12 @@ header h1 {
 
 .search-container h3 {
 	text-align: center;
+	margin-top: 1rem;
 }
 
 .search-label {
 	font-size: 1.8rem;
+	margin-left: 20%;
 }
 
 #artist-search {
@@ -195,9 +197,12 @@ footer p {
 	padding-top: 1rem;
 }
 
-@media screen and (min-width: 991.98px) {
+@media screen and (max-width: 991.98px) {
 	footer {
 		position: fixed;
+	}
+	.search-label {
+		margin-left: 45%;
 	}
 }
 
@@ -210,5 +215,26 @@ footer p {
 	}
 	footer {
 		position: relative;
+	}
+	.search-label {
+		margin-left: 45%;
+	}
+	#song-search {
+		width: 100%;
+	}
+	#artist-search {
+		width: 100%;
+	}
+}
+@media screen and (max-width: 1199.98px) {
+	.search-label {
+		margin-left: 40%;
+	}
+	
+}
+
+@media screen and (max-width: 1399.98px) {
+	.search-label {
+		margin-left: 25%;
 	}
 }
