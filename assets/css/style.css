@@ -27,7 +27,7 @@ header img {
 	float: left;
 	max-width: 8vh;
 	max-height: 8vh;
-	margin-top: 1rem;
+	margin-top: 1vh;
 }
 
 header h1 {
@@ -158,6 +158,10 @@ header h1 {
 	font-family: 'Goldman', cursive;
 }
 
+#close-button {
+	color: var(--secondary);
+}
+
 #similar-songs {
 	font-size: 1.6rem;
 	justify-content: center;
@@ -187,5 +191,17 @@ footer img {
 	margin-left: 45%;
 	max-width: 8vh;
 	max-height: 8vh;
-	margin-top: 1rem;
+	margin-top: 1vh;
+}
+
+@media screen and (max-width: 575.98px) {
+	footer img {
+		margin-left: 42%;
+	}
+}
+
+@media screen and (max-width: 767.98px) {
+	footer img {
+		margin-left: 43.5%;
+	}
 }
