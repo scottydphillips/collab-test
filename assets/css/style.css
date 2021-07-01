@@ -172,7 +172,7 @@ header h1 {
 
 footer {
 	background: linear-gradient(to left, var(--secondary), var(--primary), var(--tertiary));
-	position: relative;
+	position: fixed;
 	bottom: 0;
 	width: 100%;
 }
@@ -201,5 +201,8 @@ footer p {
 	}
 	.search-container {
 		margin-left: 8%;
+	}
+	footer {
+		position: relative;
 	}
 }

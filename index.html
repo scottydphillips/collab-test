@@ -93,10 +93,52 @@
         </div>
     </footer>
 </body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-<script src="jquery-3.5.1.min.js"></script>
-
 <script src="./assets/Javascript/Musixmatch.js"></script>
-<script src="./assets/Javascript/Youtube.js"></script>
+<!-- <script src="/assets/Javascript/Youtube.js"></script> -->
+<script src="https://apis.google.com/js/api.js"></script>
+<script src="https://apis.google.com/js/api.js"></script>
+<script>
+  /**
+   * Sample JavaScript code for youtube.search.list
+   * See instructions for running APIs Explorer code samples locally:
+   * https://developers.google.com/explorer-help/guides/code_samples#javascript
+   */
+
+  function authenticate() {
+    return gapi.auth2.getAuthInstance()
+        .signIn({scope: "https://www.googleapis.com/auth/youtube.force-ssl"})
+        .then(function() { console.log("Sign-in successful"); },
+              function(err) { console.error("Error signing in", err); });
+  }
+  function loadClient() {
+    gapi.client.setApiKey("AIzaSyA4-_coMcDHGBCtZo-lAsTusx2Od87Pq90");
+    return gapi.client.load("https://www.googleapis.com/discovery/v1/apis/youtube/v3/rest")
+        .then(function() { console.log("GAPI client loaded for API"); },
+              function(err) { console.error("Error loading GAPI client for API", err); });
+  }
+  // Make sure the client is loaded and sign-in is complete before calling this method.
+  function execute() {
+    return gapi.client.youtube.search.list({
+      "part": [
+        "snippet"
+      ],
+      "q": "Lil Nas"
+    })
+        .then(function(response) {
+                // Handle the results here (response.result has the parsed body).
+                console.log("Response", response);
+              },
+              function(err) { console.error("Execute error", err); });
+  }
+  gapi.load("client:auth2", function() {
+    gapi.auth2.init({client_id: "368521203818-e2af3jn9669mfeeifvf4c4q2rc0vde2j.apps.googleusercontent.com"});
+  });
+</script>
+<!-- <button onclick="authenticate().then(loadClient)">authorize and load</button>
+<button onclick="execute()">execute</button> -->
+
+
 
 </html>
