@@ -25,6 +25,8 @@ header {
 header img {
 	display: inline;
 	float: left;
+	max-width: 10%;
+	max-height: 10%;
 }
 
 header h1 {
@@ -182,4 +184,6 @@ footer p {
 
 footer img {
 	float: right;
+	max-width: 10%;
+	max-height: 10%;
 }
