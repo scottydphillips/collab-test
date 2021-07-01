@@ -1,5 +1,12 @@
 var searchBtn = document.getElementById('search');
 var lyricsText = document.getElementById('lyrics-text');
+var artistName = document.getElementById('artist-name');
+var songName = document.getElementById('song-name');
+var albumName = document.getElementById('album-name');
+var genre = document.getElementById('genre');
+var songDesc = document.getElementById('description');
+var songArt = document.getElementById('song-artwork');
+var similar = document.getElementById('similar-list');
 var searchHistoryContainer = document.querySelector('#recent-searches');
 var searchHistory = JSON.parse(localStorage.getItem("history")) || [];
 var apiKey = '8c4828f1e437b6afe66bd85c55527db1';
@@ -42,6 +49,9 @@ function initSearchHistory() {
 function getLyrics(event) {
 
     event.preventDefault();
+
+    similar.innerHTML = "";
+
     var search = document.getElementById('song-search').value.trim();
 
     var song = document.getElementById('song-search').value.trim();
@@ -65,7 +75,7 @@ function getLyrics(event) {
             }
         })
 
-    var fetchGenius = 'https://enigmatic-citadel-24557.herokuapp.com/' + 'http://api.genius.com/search?q=' + song + '&access_token=' + geniusApi;
+    var fetchGenius = 'https://enigmatic-citadel-24557.herokuapp.com/' + 'http://api.genius.com/search?q=' + artist + '&access_token=' + geniusApi;
 
     fetch (fetchGenius)
         .then(function (res) {
@@ -73,22 +83,34 @@ function getLyrics(event) {
         })
         .then(function (data) {
             console.log(data);
-        })
-
-    var fetchInfo = 'https://enigmatic-citadel-24557.herokuapp.com/' + 'https://shazam.p.rapidapi.com/search?term=' + song;
-    
-        fetch(fetchInfo, {
-            "method": "GET",
-            "headers": {
-            "x-rapidapi-key": "2a8483057cmshe7359d410c7efa6p13a464jsn08b4d2f3b99b",
-            "x-rapidapi-host": "shazam.p.rapidapi.com"
+            for (i = 0; i < data.response.hits.length; i++) {
+                var similarSong = data.response.hits[i].result.title;
+                var li = document.createElement('li');
+                li.appendChild(document.createTextNode(similarSong));
+                similar.appendChild(li);
             }
         })
+
+    var fetchInfo = 'https://enigmatic-citadel-24557.herokuapp.com/' + 'https://theaudiodb.p.rapidapi.com/searchtrack.php?s=' + artist + '&t=' + song;
+    
+    fetch(fetchInfo, {
+        "method": "GET",
+        "headers": {
+            "x-rapidapi-key": "2a8483057cmshe7359d410c7efa6p13a464jsn08b4d2f3b99b",
+            "x-rapidapi-host": "theaudiodb.p.rapidapi.com"
+        }
+    })
             .then(function (res) {
                 return res.json();
             })
             .then(function (data) {
                 console.log(data);
+                songName.textContent = "Song: " + data.track[0].strTrack;
+                artistName.textContent = "Artist: " + data.track[0].strArtist;
+                albumName.textContent = "Album: " + data.track[0].strAlbum;
+                songDesc.textContent = "Description: " + data.track[0].strDescriptionEN;
+                songArt.src = data.track[0].strTrackThumb;
+                genre.textContent = "Genre: " + data.track[0].strGenre;
             })
 
 }

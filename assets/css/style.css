@@ -130,15 +130,31 @@ header h1 {
 	font-size: 1.6rem;
 	justify-content: center;
 	text-align: center;
-	margin-top: 5%;
+	margin-top: 0.5rem;
 	width: 580px;
 	height: px;
 }
 
 #song-info {
 	font-size: 1.6rem;
-	text-align: center;
+	margin-top: 0.5rem;
+}
+
+.song-info {
+	font-size: 1.6rem;
+	text-align: left;
 	margin-top: 5%;
+}
+
+#song-artwork {
+	width: 100%;
+	height: 100%;
+}
+
+#similar-list {
+	list-style-type: none;
+	font-size: 1.5rem;
+	margin-top: 2%;
 }
 
 #lyrics-text {
@@ -158,8 +174,8 @@ header h1 {
 	font-size: 2rem;
 	border-radius: 2rem;
 	padding: 1.5rem;
-	margin-top: 10%;
-	margin-left: 2.5%;
+	margin-top: -40rem;
+	margin-left: 10rem;
 	font-family: 'Iceland', sans-serif;
 }
 
@@ -189,7 +205,8 @@ header h1 {
 	font-size: 1.6rem;
 	justify-content: center;
 	text-align: center;
-	margin-top: 5%;
+	margin-top: -20rem;
+	margin-left: -70rem;
 }
 
 footer {
