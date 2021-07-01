@@ -9,17 +9,17 @@ var key ='AIzaSyCTdVNpL7Bqg2E6ERIPsO5dTg3GPIOtwmM'
 var url ='https://www.googleapis.com/youtube/v3/search?part=snippet&order=viewCount&maxResults=1&q='
 
 // Targets the id to pull text from
-// var songName = getElementById('song-search');
-// var artistName = getElementById('artist-search');
+// var songName = document.getElementById('song-search');
+// var artistName = document.getElementById('artist-search');
 // ^ These ids need to match the form inputs on the main html
 
 // Stores the text to a variable to use later in our fetchYT url
 // var song = songName.textcontent; 
 // var artist = artistName.textcontent;
-
+// song = song.replace(/\s+/g, '+');
+// artist = artist.replace(/\s+/g, '+');
+// .replace(/\s+/g, '+')
 // ^ These  need to replace spaces with '+' -- might need to research how to replace chars in string with other chars
-
-
 // these are test variables that will be commented or deleted later
 var song = 'nothing+lasts+forever+'
 var artist = 'sam+hunt'
@@ -38,6 +38,7 @@ function getYT(requestYT){
     })
     .then(function(data){
         console.log(data);
+        console.log(data.items[0].id.videoId);
     $('#youtube-container').append(items.id.videoId)
 
     })
