@@ -57,6 +57,7 @@ function getLyrics(event) {
         })
         .then(function (data) {
             console.log(data);
+            appendToHistory(search);
 
             if (data.message.body.length === 0) {
                 lyricsText.textContent = "Sorry, can't find the lyrics for this song. Try searching for another one!"
