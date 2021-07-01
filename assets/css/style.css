@@ -43,10 +43,6 @@ header h1 {
 	padding-bottom: 1rem;
 }
 
-.search-container {
-	margin: 5%;
-}
-
 .search-container h3 {
 	text-align: center;
 }
@@ -113,7 +109,6 @@ header h1 {
 	justify-content: center;
 	text-align: center;
 	margin-top: 5%;
-	border: .25rem solid var(--primary);
 	width: 580px;
 	height: px;
 }
@@ -122,7 +117,6 @@ header h1 {
 	font-size: 1.6rem;
 	text-align: center;
 	margin-top: 5%;
-	border: .25rem solid var(--primary);
 }
 
 #lyrics-text {
@@ -166,14 +160,13 @@ header h1 {
 }
 
 #close-button {
-	color: var(--secondary);
+	color: var(--primary);
 }
 
 #similar-songs {
 	font-size: 1.6rem;
 	justify-content: center;
 	text-align: center;
-	border: .25rem solid var(--primary);
 	margin-top: 5%;
 }
 
@@ -202,29 +195,11 @@ footer p {
 	}
 }
 
-@media screen and (min-width: 1199.98px) {
-	footer {
-		position: fixed;
-	}
-}
-
-@media screen and (min-width: 1399.98px) {
-	footer {
-		position: fixed;
-	}
-}
-
 @media screen and (max-width: 767.98px) {
-	#youtube-container {
-		border: hidden;
-	}
-	#song-info {
-		border: hidden;
-	}
-	#similar-songs {
-		border: hidden;
-	}
 	#lyrics-modal {
 		margin-left: 36%;
+	}
+	.search-container {
+		margin-left: 8%;
 	}
 }
