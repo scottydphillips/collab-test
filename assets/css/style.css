@@ -18,27 +18,29 @@ header {
 	color: var(--complement);
 }
 
-.jumbotron-fluid {
+header .container {
 	min-height: 9vh;
 }
 
 header img {
 	display: inline;
 	float: left;
+	max-width: 8vh;
+	max-height: 8vh;
+	margin-top: 1vh;
 }
 
 header h1 {
-	font-size: 3.6rem;
+	font-size: 6rem;
 	text-align: center;
 	font-family: 'Goldman', monospace;
 	color: var(--complement);
 }
 
-header h2 {
+.lead {
 	color: var(--tertiary);
-	font-size: 3rem;
-	text-align: left;
-	margin-left: 20vw;
+	font-size: 2.2rem;
+	text-align: center;
 }
 
 .search-container {
@@ -157,6 +159,10 @@ header h2 {
 	font-family: 'Goldman', cursive;
 }
 
+#close-button {
+	color: var(--secondary);
+}
+
 #similar-songs {
 	font-size: 1.6rem;
 	justify-content: center;
@@ -178,9 +184,25 @@ footer .container {
 
 footer p {
 	color: var(--tertiary);
-	float: right;
+	text-align: center;
+	margin-top: .75rem;
 }
 
 footer img {
-	float: right;
+	margin-left: 45%;
+	max-width: 8vh;
+	max-height: 8vh;
+	margin-top: 1vh;
+}
+
+@media screen and (max-width: 575.98px) {
+	footer img {
+		margin-left: 42%;
+	}
+}
+
+@media screen and (max-width: 767.98px) {
+	footer img {
+		margin-left: 43.5%;
+	}
 }
