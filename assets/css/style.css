@@ -23,11 +23,10 @@ header .container {
 }
 
 header img {
-	display: inline;
 	float: left;
 	max-width: 8vh;
 	max-height: 8vh;
-	margin-top: 1vh;
+	margin-top: 1.7vh;
 }
 
 header h1 {
@@ -41,10 +40,7 @@ header h1 {
 	color: var(--tertiary);
 	font-size: 2.2rem;
 	text-align: center;
-}
-
-.search-container {
-	margin: 5%;
+	padding-bottom: 1rem;
 }
 
 .search-container h3 {
@@ -92,6 +88,10 @@ header h1 {
 	font-size: 1.8rem;
 }
 
+#recent-searches {
+	width: auto;
+}
+
 #recent-searches li {
 	background: linear-gradient(to right, var(--secondary), var(--primary), var(--tertiary) );
 	color: var(--complement);
@@ -109,14 +109,14 @@ header h1 {
 	justify-content: center;
 	text-align: center;
 	margin-top: 5%;
-	border: .25rem solid var(--primary);
+	width: 580px;
+	height: px;
 }
 
 #song-info {
 	font-size: 1.6rem;
 	text-align: center;
 	margin-top: 5%;
-	border: .25rem solid var(--primary);
 }
 
 #lyrics-text {
@@ -160,14 +160,13 @@ header h1 {
 }
 
 #close-button {
-	color: var(--secondary);
+	color: var(--primary);
 }
 
 #similar-songs {
 	font-size: 1.6rem;
 	justify-content: center;
 	text-align: center;
-	border: .25rem solid var(--primary);
 	margin-top: 5%;
 }
 
@@ -184,25 +183,26 @@ footer .container {
 
 footer p {
 	color: var(--tertiary);
+	font-size: 2.4rem;
 	text-align: center;
 	margin-top: .75rem;
+	padding-top: 1rem;
 }
 
-footer img {
-	margin-left: 45%;
-	max-width: 8vh;
-	max-height: 8vh;
-	margin-top: 1vh;
-}
-
-@media screen and (max-width: 575.98px) {
-	footer img {
-		margin-left: 42%;
+@media screen and (min-width: 991.98px) {
+	footer {
+		position: fixed;
 	}
 }
 
 @media screen and (max-width: 767.98px) {
-	footer img {
-		margin-left: 43.5%;
+	#lyrics-modal {
+		margin-left: 36%;
+	}
+	.search-container {
+		margin-left: 8%;
+	}
+	footer {
+		position: relative;
 	}
 }
