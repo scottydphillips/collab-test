@@ -179,7 +179,7 @@ header h1 {
 
 footer {
 	background: linear-gradient(to left, var(--secondary), var(--primary), var(--tertiary));
-	position: fixed;
+	position: relative;
 	bottom: 0;
 	width: 100%;
 }
@@ -194,4 +194,37 @@ footer p {
 	text-align: center;
 	margin-top: .75rem;
 	padding-top: 1rem;
+}
+
+@media screen and (min-width: 991.98px) {
+	footer {
+		position: fixed;
+	}
+}
+
+@media screen and (min-width: 1199.98px) {
+	footer {
+		position: fixed;
+	}
+}
+
+@media screen and (min-width: 1399.98px) {
+	footer {
+		position: fixed;
+	}
+}
+
+@media screen and (max-width: 767.98px) {
+	#youtube-container {
+		border: hidden;
+	}
+	#song-info {
+		border: hidden;
+	}
+	#similar-songs {
+		border: hidden;
+	}
+	#lyrics-modal {
+		margin-left: 36%;
+	}
 }
