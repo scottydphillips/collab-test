@@ -50,13 +50,17 @@ header h1 {
 
 .search-label {
 	font-size: 1.8rem;
-	margin-left: 20%;
+	margin-left: 40%;
+	margin-top: 0.5rem;
 }
 
 #artist-search {
 	width: 18rem;
 	height: 2.5rem;
 	font-size: 1.4rem;
+	text-align: center;
+	margin-left: 17%;
+	margin-top: 1rem;
 }
 
 #artist-search-label {
@@ -67,6 +71,13 @@ header h1 {
 	width: 18rem;
 	height: 2.5rem;
 	font-size: 1.4rem;
+	text-align: center;
+	margin-left: 17%;
+	margin-top: 1rem;
+}
+
+.line {
+	margin-top: 2rem;
 }
 
 .btn-outline-dark {
@@ -74,7 +85,9 @@ header h1 {
 	border: 0.1rem solid var(--secondary);
 	border-radius: 2rem;
 	padding: 0.2rem;
-	margin-top: 1rem;
+	width: 30%;
+	margin-top: 2rem;
+	margin-left: 10rem;
 }
 
 .btn-outline-dark:hover {
@@ -94,6 +107,7 @@ header h1 {
 }
 #recent-searches-label {
 	font-size: 1.8rem;
+	text-align: center;
 }
 
 #recent-searches {
@@ -106,7 +120,7 @@ header h1 {
 	font-size: 1.8rem;
 }
 
-#recent-searches:hover {
+#recent-searches button:hover {
 	cursor: pointer;
 	background: var(--tertiary);
 	box-shadow: 0.35rem 0rem 0.35rem var(--primary);
