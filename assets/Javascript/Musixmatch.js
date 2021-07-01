@@ -40,11 +40,6 @@ function initSearchHistory() {
       renderSearchHistory();
     }
 
-
-function displaySong() {
-    console.log('test search button');
-}
-
 function getLyrics(event) {
 
     event.preventDefault();
@@ -52,9 +47,6 @@ function getLyrics(event) {
 
     var song = document.getElementById('song-search').value.trim();
     var artist = document.getElementById('artist-search').value.trim();
-
-    console.log(song);
-    console.log(artist);
 
     var fetchLyrics = 'https://enigmatic-citadel-24557.herokuapp.com/' + 'https://api.musixmatch.com/ws/1.1/matcher.lyrics.get?q_track=' + song + '&q_artist=' + artist + '&apikey=' + apiKey;
 
@@ -88,6 +80,7 @@ function getLyrics(event) {
         fetch(fetchInfo, {
             "method": "GET",
             "headers": {
+            "x-rapidapi-key": "2a8483057cmshe7359d410c7efa6p13a464jsn08b4d2f3b99b",
             "x-rapidapi-host": "shazam.p.rapidapi.com"
             }
         })
