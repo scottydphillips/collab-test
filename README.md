@@ -25,18 +25,18 @@ Bootstrap, Google Fonts
 [SA1L](https://scottydphillips.github.io/sa1l/)
 
 ## Screenshot of Working Application
-![screenshot]()
+![screenshot](./assets/Screenshot-2021-07-01-210551.png)
 
 
 ## Contributors
 ### Contact Info for the SA1L Dev Team
 
-Jonathan Renaud: 
+Jonathon Renaud: jonathonrenaud1988@gmail.com
 
 Michael Callahan: mcallahan0@yahoo.com
 
-Nathan Chanthavong:
+Nathan Chanthavong: chanthavongnathan@gmail.com
 
 Scott Phillips: scotty.d.phillips@gmail.com
 
-SA1L Logo designed by and courtesy of 
+SA1L Logo designed by and courtesy of Jeni

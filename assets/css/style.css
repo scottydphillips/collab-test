@@ -135,9 +135,15 @@ header h1 {
 	height: px;
 }
 
+#youtube-vid {
+	margin-left: 40rem;
+	margin-top: -25rem;
+}
+
 #song-info {
 	font-size: 1.6rem;
-	margin-top: 0.5rem;
+	margin-top: -37rem;
+	margin-left: 90rem;
 }
 
 .song-info {
@@ -206,7 +212,7 @@ header h1 {
 	justify-content: center;
 	text-align: center;
 	margin-top: -20rem;
-	margin-left: -70rem;
+	margin-left: -60rem;
 }
 
 footer {
